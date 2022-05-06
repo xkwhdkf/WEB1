@@ -1,0 +1,187 @@
+<!Doctype html>
+<html>
+<head>
+<title>html이란 무엇인가?</title>
+<meta charset="uft-8">
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+<ol>
+<li><a href="1.html">HTML</a></li>
+<li><a href="2.html">CSS</a></li>
+<li><a href="3.html">JavaScript</a></li>
+</ol>
+<h1>
+  <h2>HTML</h2>
+  <ol>
+    <li><h3>형식</h3>
+    <태그명 속성명1+"속성값1"속성명2="속성값2">컨텐츠</태그명>
+    (예:<a href="http://opentutorials.org">생활코딩</a>)</li>
+  <p>- 태그는 컨텐츠를 감싸야 한다.<p>-첫번째 태그는 시작태그, 두번째 태그는 닫는 태그
+  <p>-닫는 태그는 태그명 앞에'/'가 붙어야 한다.
+  <p>-속성은 태그의 부가적인 정보가 들어온다.(예:링크주소)
+  <li><h3>링크</h3></li>
+  <h5>-문법(Syntax)</h5>
+      (a) href="URL" rirle="설명" target="문서가 로드될 대상")링크이름(/a)
+   <h5>-설명</h5>
+  <p> * 문서에서 문서로 이동하는 수단
+  <p> * a(achor)를 사용함
+  <p> * 같은 문서 내에서도 특정한 위치로 이동이 가능
+  <p> * target을 지정해서 문서가 로드될 위치를 지정할 수 있다.
+  <p> * target(_blank, _self, _parent, _top, framename
+  <li><h3>문단(p)(/p), 줄바꿈(br/), 띄어쓰기&nbsp;</h3></li>
+  <li><h3>이미지</h3></li>
+  <h5>문법</h5>
+  (img src="이미지가 위치하는 URL" alr="대체텍스트" width="폭" height="높이" border="테두리"
+       longdesc="이미지와 관련된 정보에 대한 링크"/)
+       <li><h3>표</h3></li>
+       <h5>문법</h5>
+       (table)
+        <p> &nbsp;  (tr)
+        <p> &nbsp;&nbsp;&nbsp;   (th)(/th)
+        <p>  &nbsp; (tr)
+        <p>   &nbsp;&nbsp;&nbsp;   (td)(/td)
+        <p>  &nbsp; (/tr)
+        <p> (/table)
+          <h5>설명</h5>
+          <p>*데이터를 구조화할 때 사용됨<p>*레이아웃으로도 활용 되지만 dic와 css를 활용하는 것을 권장함
+          <p>*th는 데이터 그룹의 제목에 해당함(header cells)<p>*td는 th에 속하는 데이터 그룹(standard cells)
+  <h5>예제</h5>
+  <p>*(table border="1") border 는 테투리를 뜻함
+  <p>*(!--colspan과 rowspan을 이용해서 셀을 병합한다--)
+  <p>*(!--css를이 이용ㅇ해서 표를 꾸며주는 예--)
+  <li><h3>목록</h3></li>
+  <h5>문법</h5>
+  * (!--순서가 없는 항목--)
+      <p>&nbsp;(ul)
+      <p>  &nbsp;&nbsp;&nbsp;(li)항목(/li)
+    <p> &nbsp; (ul)
+  <p>     * (!--순서가 있는 항목--)
+    <p>&nbsp; (ol)
+      <p>&nbsp;&nbsp;&nbsp; (li>항목(/li)
+    <p>&nbsp; (/ol)
+    <h5>  -설명</h5>
+      <p>*연관되어 있는 항목들을 나열할 때 사용
+      <p>*순서가 없는 항목은ul(unordered list), 순서가 있는 항목은ol(orfered list)를 사용한다
+      <p>*CSS와 함께 사용해서 메뉴로도 사용된다.
+        <li><h3>IFRAME</h3></li>
+          <h5>문법</h5>
+          <p> *(iframe src="불러올 웹페이지의 URL" width="폭" height="높이" scrolling="스크롤링 허용여부(yes,no,auto)")
+             framborder="테두리 사용여부(0,1) / iframe를 지원하지 않는 브라우저인 경우 대체정보를 제공
+            (/iframe)
+          <h5>-요약<h5>
+            페이지안에 페이지를 삽입한다.
+          -예제
+  (iframe src="http://egoing.net" width="100%" height="300" framenorder="1" scrolling="yes")(/iframe)
+  <iframe src="http://egoing.net" width="100%" height="300" framenorder="1" scrolling="yes"></iframe>
+  <li><h3>FRAMES</h3></li>
+    <h5>요약</h5>
+     <p>하나의 화면에서 여러개의 페이지를 분활해서 보여줌
+    <h5>문법</h5>
+     *(framset cols="컬럼의 크기(콤마로 구분)")
+    <p> &nbsp;&nbsp;   (frame src="frame_a.htm" name="프래임의 이름"/)
+    <p>  (/framset)
+  <h5>  -예제</h5>
+     *(frameset cols="25%,75%")
+    <p> &nbsp;&nbsp;   (frame src="frame_a.htm" /)
+    <p> &nbsp;&nbsp;   (frame src="frame_b.htm" /)
+    <p>  (/frameset)
+      <li><h3>URL</h3></li>
+         <h5>요약</h5>
+          URL(Uniform Resource Locator)란 웹페이지, 이미지, 동영상과 같은 정보가 위치하는 유니크한 위치 정보
+         <h5>구성</h5>
+          http://lab.egoing.net/child/index.php?projet=codingeverybody#foot
+        <p>  * http"// -명칭 scheme 통신에 사용되는 방식,프로토콜
+        <p>  * lab.egoing.net/ - 명칭 hosts 자원이 위치하고 있는 웹서버의 이름, 도메인이나 IP가 사용된다
+        <p>  * /child/index.php - 명칭 url-path 루트 디렉토리부터 자원이 위치한 장소까지의 디렉토리와 파일명
+        <p>  * ?projet=codingeverybody - 명칭 query 웹서버에 넘기는 추가적인 질문
+        <p>  * #foot - 명칭 bookmark 하이퍼링크를 클릭했을 때 특정 위치로 이동하기 위해서 사용
+        <h5>경로(path)</h5>
+         <p>*상대결로 : 문서를 기준으로 한 다른 리소스들의 위치정보
+         <p>*절대경로 : 문서의 위치를 가르키틑 도메인을 포함한 전체 위치정보
+        <h5>예제</h5>
+         <p>*절대경로 - /1depth/2depth/index.html
+         <p>*상대경로 - 1depth/2depth/index.html
+          <li><h3>텍스트 입력</h3></li>
+           (input type="text")
+           <h5>문법</h5>
+             (input type="text" name="값의 이름" value="값" disabled="disabled" readonly="readonly" /)
+          <h5>예제</h5>
+            (form action="http://lab.egoing.net/form/receiver.php" method="GET")
+          <p>  닉네임 : (textarea name="nickname" /)(br  /)
+          <p>  (input type="submit"
+          <p>  (/form)
+            <li><h3>textarea</h3></li>
+               <h5>요약</h5>
+                여러줄의 텍스트 입력
+               <h5>문법</h5>
+                (textarea name="값의 이름" rows="행의 수" cols="열의 수" disabled="disabled" readonlt="readonly")(/textarea)
+               <h5>예제</h5>
+                (form action="http://lab.egoing.net/form/receiver.php" method="GET")
+                 닉네임 : (textarea name="nickname" /)(/textarea)
+                 (input type="submit" /)
+                 (/form)
+                 <li><h3>선택</h3></li>
+                     *(input type="checkbox")
+                      <h5>요약</h5>
+                      여러개의 항목 중에서 원하는 것을 복수로 선택하는 체크박스
+                      <h5>문법</h5>
+                      (input type="checkbox" name="값의 이름" value="값")
+                      <h5>예제</h5>
+                      <p>(form action="http://lab.egiong.net/form/receiver.php" method="GET")
+                      <p>관심사 : (br  /)
+                      <p>(input type="checkbox" name="interext[ ]" value="programming"프로그래밍(br  /)
+                      <p>(input type="checkbox" name="interext[ ]" value="design">디자인(br  /)
+                      <p>(input type="checkbox" name="interext[ ]" value="planning"기획(br  /)
+                      <p>(input type="submit"  /)
+                      <p>(/form)
+                     <br><strong>*(input type="radio")</strong></br>
+                      <h5>요약</h5>
+                       여러개의 항목 중에서 원하는 것을 하나만 선택하는 라디오 버튼
+                      <h5>문법</h5>
+                       (input type="radio" name="값의 이름" value="값)
+                      <h5>예제</h5>
+                       <p>(form action="http://lab.egiong.net/form/receiver.php" method="GET")
+                      <p>관심사 : (br  /)
+                      <p>(input type="radio" name="interext[ ]" value="programming"프로그래밍(br  /)
+                      <p>(input type="radio" name="interext[ ]" value="design"디자인(br  /)
+                      <p>(input type="radio" name="interext[ ]" value="planning"기획(br  /)
+                      <p>(input type="submit"  /)
+                      <p>(/form)
+                    <p><h4> <strong>select</strong></h4>
+                      <h5>요약</h5>
+                       여러개의 항목 중에서 원하는 것을 하나만 선택하는 콤보박스
+                      <h5>문법</h5>
+                       (select name="값의이름")
+                         <p>(option value="선택되 경우 name의 값이 됨">값에 대한 표시값(/option)
+                         . . .option 반복
+                       <p>(/select)
+                      <h5>예제</h5>
+                       (input type="rido" name="값의 이름" value="값")
+                       <p>(form action="http://lab.egiong.net/form/receiver.php" method="GET")
+                         <p>직업 :
+                            <p>&nbsp;&nbsp;(select name="job")
+                               <p>&nbsp;&nbsp;&nbsp;(option value="designer">디자이너(/option)
+                               <p>&nbsp;&nbsp;&nbsp;(option value="programmer"프로그래머(/option)
+                               <p>&nbsp;&nbsp;&nbsp;(option value="planner">기획자(/option)
+                            <p>&nbsp;&nbsp;(/select)
+                          <p>&nbsp;(input type="submit" /)
+                        <p>(/form)
+
+                 <li><h3>파일전송</h3></li>
+                    (input type="file")
+                    <h5>문법</h5>
+                     (input type="file" name="서버쪽에서 파일을 식별하기 위한 이름" /)
+                    <h5>예제</h5>
+                     (form action="http://opentutorials.org/lab/receiver.php" method="POTS" enctype="multipart/form-data")
+                        <p>&nbsp;&nbsp;(input type="file" name="file"  /)
+                        <p>&nbsp;&nbsp;(input type="submit"  /)
+                    <p>(/form)
+                      </ol>
+                      </body>
+</body>
+</html>
+<h1>다울이</h1>
+<img src="다울이.jpg"width="15%">
+<h3>언니 터키츄 언제 먹어요</h3>
+<img src="다울이2.jpg"width="15%">
